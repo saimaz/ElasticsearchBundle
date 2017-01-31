@@ -1,12 +1,12 @@
 # Quick find functions
 
-> If you haven't read about maping and simple usage of the bundle please take a look at first to the [mapping](mapping.md) docs.
+> If you haven't read about mapping and simple usage of the bundle please take a look at first to the [mapping](http://docs.ongr.io/ElasticsearchBundle/mapping) docs.
 
 For all examples below we will use `Content` document class from the [CRUD actions](crud.md) chapter.
 
 ## Find a document by ID
 
-Find by id will execute [elasticsearch get query](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-get.html).
+`find()` function to search a document by `id` uses [elasticsearch get query](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-get.html).
 
 ```php
 

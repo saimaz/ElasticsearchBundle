@@ -20,7 +20,7 @@ $search->setScroll('10m'); // Scroll time
 $termQuery = new TermQuery('country', 'Lithuania');
 $search->addQuery($termQuery);
 
-$results = $repo->execute($search);
+$results = $repo->findDocuments($search);
 
 foreach ($results as $document) {
 
@@ -45,7 +45,7 @@ $search->setScroll('10m'); // Scroll time
 $termQuery = new TermQuery('country', 'Lithuania');
 $search->addQuery($termQuery);
 
-$results = $repo->execute($search, Result::RESULTS_RAW);
+$results = $repo->findDocuments($search, Result::RESULTS_RAW);
 
 foreach ($results as $raw) {
 

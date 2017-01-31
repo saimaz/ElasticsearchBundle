@@ -1,12 +1,14 @@
 # CLI Commands
 
-> All commands can be accessed using Symfony command line interface. To use it simply type `app/console <command_name> <arguments/options>` in root folder of your project.
+> All commands can be executed using Symfony command line interface.
+ Type `bin/console <command_name> <arguments/options>` from your project root directory.
 
 ## Create index
 
 Command name: `ongr:es:index:create`
 
-Creates a new index in Elasticsearch (including with mapping if not skipped) for the specified manager (see: [configuration chapter](configuration.md)).
+Creates a new index in Elasticsearch (including with mapping if not skipped) for the specified manager
+ (see: [configuration chapter](configuration.md)).
 
 |     Options    |             Value            |                                      What it does                                      |
 |:--------------:|:----------------------------:|:--------------------------------------------------------------------------------------:|
@@ -17,7 +19,9 @@ Creates a new index in Elasticsearch (including with mapping if not skipped) for
 | `--if-not-exists` | *none* | Skips an index creation, when the index already exists.                                |
 | `--dump`       | *none*        | Prints out the index mapping json                                                      |
 
-If you want to use timestabale indexes it's very handy to use it together with `-a` option. `-t` adds a date as the suffix and `-a` adds an alias as defined index name in manager configuration. So the code will work fine without any configuration changes, you dont need to do any other actions.
+If you want to use timestabale indexes it's very handy to use it together with `-a` option. `-t` adds a date as the suffix
+ and `-a` adds an alias as defined index name in manager configuration. So the code will work fine without any configuration
+ changes, you dont need to do any other actions.
 
 > `-a` option drops a previous aliases before creating new one.
 

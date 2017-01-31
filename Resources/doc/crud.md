@@ -24,7 +24,7 @@ class Content
     public $id;
 
     /**
-     * @ES\Property(type="string")
+     * @ES\Property(type="text")
      */
     public $title;
 }
@@ -120,7 +120,8 @@ $repo->update(1, [], 'ctx._source.stock+=1');
 ```
 > Important: when using script update fields cannot be updated, leave empty array, otherwise you will get 400 exception.
 
-`ctx._source` comes from groovy scripting and you have to enable it in elasticsearch config with: `script.groovy.sandbox.enabled: false`
+`ctx._source` comes from groovy/painless scripting and you have to enable it in elasticsearch config with: `script.inline: true`
+> More info about scripting configuration [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting.html).
 
 
 In addition you also can get other document fields with the response of update, lets say we also want a content field and a new title, so just add them separated by a comma:

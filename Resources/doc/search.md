@@ -19,7 +19,7 @@ $search->addQuery($termQuery);
 $rangeQuery = new RangeQuery('population', ['from' => 10000]);
 $search->addQuery($rangeQuery);
 
-$results = $repo->execute($search);
+$results = $repo->findDocuments($search);
 
 ```
 
@@ -82,7 +82,7 @@ cities and states with title "Indiana":
 $search = new Search();
 $search->addQuery(new TermQuery('title', 'Indiana'));
 
-$results = $manager->execute(
+$results = $manager->findDocuments(
     // Array of documents representing different types
     ['AppBundle:City', 'AppBundle:State'], 
     $search

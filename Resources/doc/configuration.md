@@ -20,6 +20,10 @@ ongr_elasticsearch:
               type: edge_ngram
               min_gram: 1
               max_gram: 20
+      char_filter:
+          b_tag_escape:
+              type: html_strip
+              escaped_tags: ['b']
     managers:
         default:
             index: 

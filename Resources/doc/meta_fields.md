@@ -47,7 +47,9 @@ attribute is `class`, where you need to specify class of parent document.
     public $parent;
 ```
 
-### @Ttl (_ttl)
+### @Ttl (_ttl) (DEPRECATED)
+
+> **DEPRECATED** Use timestamped documents and removed old ones with cron and delete by query.
 
 This field allows to configure how long a document should live before it is automatically
 deleted. After you add property with `@Ttl` annotation, TTL feature is automatically enabled. 
